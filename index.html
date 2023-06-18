@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <style>
+   body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: #580808;
+}
+
+#game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #420665;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+#turn {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#winner, #draw {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #0dab4f;
+}
+
+#restart {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #91154b;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#restart:hover {
+  background-color: #c7cd0f;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Tic Tac Toe</h1>
+  <div id="game">
+    <div id="grid">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <p id="turn"></p>
+    <p id="winner"></p>
+    <p id="draw"></p>
+    <button id="restart">Restart</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
